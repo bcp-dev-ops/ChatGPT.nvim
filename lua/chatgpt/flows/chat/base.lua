@@ -834,10 +834,10 @@ function Chat:open()
 
   -- close
   self:map(Config.options.chat.keymaps.close, function()
-    self:hide()
     -- If current in insert mode, switch to insert mode
     if vim.fn.mode() == "i" then
       vim.api.nvim_command("stopinsert")
+      self:hide()
     end
   end)
 
