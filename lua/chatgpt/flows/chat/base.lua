@@ -836,7 +836,7 @@ function Chat:open()
   self:map(Config.options.chat.keymaps.close, function()
     -- If current in insert mode, switch to insert mode
     self:hide()
-  end, nil, { "i" }) 
+  end, nil, { "n" }) 
 
   local function inTable(tbl, item)
     for key, value in pairs(tbl) do
