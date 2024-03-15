@@ -837,6 +837,7 @@ function Chat:open()
     -- If current in insert mode, switch to insert mode
     if vim.fn.mode() == "i" then
       vim.api.nvim_command("stopinsert")
+    else 
       self:hide()
     end
   end)
