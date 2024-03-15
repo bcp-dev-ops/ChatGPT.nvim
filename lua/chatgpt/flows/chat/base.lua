@@ -835,10 +835,8 @@ function Chat:open()
   -- close
   self:map(Config.options.chat.keymaps.close, function()
     -- If current in insert mode, switch to insert mode
-    if vim.fn.mode() ~= "i" then
-      self:hide()
-    end
-  end)
+    self:hide()
+  end, nil, { "i" }) 
 
   local function inTable(tbl, item)
     for key, value in pairs(tbl) do
